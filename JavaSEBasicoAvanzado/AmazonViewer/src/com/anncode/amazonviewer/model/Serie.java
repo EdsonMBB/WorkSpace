@@ -65,7 +65,7 @@ public class Serie extends Film {
 
 	@Override
 	public void view() {
-		
+		setViewed(true);
 	}
 	
 }

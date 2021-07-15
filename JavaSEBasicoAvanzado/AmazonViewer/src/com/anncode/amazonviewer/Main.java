@@ -14,10 +14,25 @@ import com.anncode.amazonviewer.model.Serie;
 import com.anncode.makereport.Report;
 import com.anncode.util.AmazonUtil;
 
+
+
+/**
+ * <h1>AmazonViewer</h1>
+ * AmazonViewer es un programa que permite visualizar Movies, Series con sus respectivos Chapters,
+ * Books y Magazines. Te permite generar reportes generales y con fecha del día.
+ * <p>
+ * Existen algunas reglas como que todos los elementos pueden ser visualizadors o leídos a excepción
+ * de las Magazines, estás solo pueden ser vistas a modo de exposición sin ser leídas.
+ * 
+ * @author anncode
+ * @version 1.1
+ * @since 2018
+ * 
+ * */
 public class Main {
 
 	public static void main(String[] args) {
-		
+		// TODO Auto-generated method stub
 		showMenu();
 
 	}
@@ -28,7 +43,7 @@ public class Main {
 			
 			System.out.println("BIENVENIDOS AMAZON VIEWER");
 			System.out.println("");
-			System.out.println("Selecciona el nÃºmero de la opciÃ³n deseada");
+			System.out.println("Selecciona el número de la opción deseada");
 			System.out.println("1. Movies");
 			System.out.println("2. Series");
 			System.out.println("3. Books");
@@ -69,7 +84,7 @@ public class Main {
 	
 				default:
 					System.out.println();
-					System.out.println("....Â¡Â¡Selecciona una opciÃ³n!!....");
+					System.out.println("....¡¡Selecciona una opción!!....");
 					System.out.println();
 					exit = 1;
 					break;
@@ -79,8 +94,9 @@ public class Main {
 		}while(exit != 0);
 	}
 	
-	static ArrayList<Movie> movies = Movie.makeMoviesList();
+	static ArrayList<Movie> movies = new ArrayList<>();
 	public static void showMovies() {
+		movies = Movie.makeMoviesList();
 		int exit = 1;
 		
 		do {
@@ -185,7 +201,7 @@ public class Main {
 			System.out.println();
 			
 			for (int i = 0; i < books.size(); i++) { //1. Book 1
-				System.out.println(i+1 + ". " + books.get(i).getTitle() + " LeÃ­do: " + books.get(i).isReaded());
+				System.out.println(i+1 + ". " + books.get(i).getTitle() + " Leído: " + books.get(i).isReaded());
 			}
 			
 			System.out.println("0. Regresar al Menu");
@@ -318,6 +334,8 @@ public class Main {
 	}
 	
 }
+
+
 
 
 

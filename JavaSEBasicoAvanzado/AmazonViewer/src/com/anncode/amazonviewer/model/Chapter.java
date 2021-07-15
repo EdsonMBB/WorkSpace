@@ -2,6 +2,10 @@ package com.anncode.amazonviewer.model;
 
 import java.util.ArrayList;
 
+/**
+ * Hereda de {@link Movie}
+ * @see Film
+ * */
 public class Chapter extends Movie {
 	
 	
@@ -64,17 +68,20 @@ public class Chapter extends Movie {
 	
 	@Override
 	public void view() {
+		// TODO Auto-generated method stub
 		super.view();
-		ArrayList<Chapter> chapters = getSerie().getChapters();
+		ArrayList<Chapter> chapters =  getSerie().getChapters();
 		int chapterViewedCounter = 0;
-		for (Chapter chapter : chapters)
-		{
-			if(chapter.getIsViewed()) {
+		for (Chapter chapter : chapters) {
+			if (chapter.getIsViewed()) {
 				chapterViewedCounter++;
 			}
 		}
+		
 		if (chapterViewedCounter == chapters.size()) {
-			getSerie().setViewed(true);
+			getSerie().view();
 		}
 	}
+	
 }
+
