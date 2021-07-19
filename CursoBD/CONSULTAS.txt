@@ -1,0 +1,61 @@
+SELECT * FROM usuarios u RIGHT JOIN posts p ON u.id = p.usuario_id 
+SELECT * FROM usuarios u RIGHT JOIN posts p ON u.id = p.usuario_id where u.id is null
+SELECT * FROM usuarios u LEFT JOIN posts p ON u.id = p.usuario_id where p.usuario_id is null
+SELECT * FROM usuarios u LEFT JOIN posts p ON u.id = p.usuario_id where p.usuario_id 
+
+--UNION DE DOS SELECT PARA HACER UN FULL OUTER JOIN
+SELECT * FROM usuarios u LEFT JOIN posts P ON u.iD = P.USUARIO_ID UNION SELECT * FROM usuarios RIGHT JOIN posts ON usuarios.id = posts.usuario_id;
+SELECT * FROM usuarios u LEFT JOIN posts P ON u.iD = P.USUARIO_ID WHERE p.usuario_ID IS NULL UNION SELECT * FROM usuarios RIGHT JOIN posts ON usuarios.id = posts.usuario_id WHERE posts.usuario_id IS NULL;
+---
+
+
+-----
+WHERE
+
+SELECT * FROM	posts WHERE id < 50;
+SELECT * FROM posts WHERE estatus = 'Inactivo';
+SELECT * FROM posts WHERE titulo LIKE '%escandalo%';
+SELECT * FROM posts WHERE fecha_publicacion > '2025-01-01';
+SELECT * FROM posts WHERE fecha_publicacion BETWEEN '2023-01-01' AND '2025-12-31';
+SELECT * FROM posts WHERE YEAR(fecha_publicacion) BETWEEN '2023' AND '2024';
+SELECT * FROM posts WHERE MONTH(fecha_publicacion) = '04';
+SELECT * FROM posts WHERE usuario_id IS NOT NULL;
+SELECT * FROM posts WHERE usuario_id IS NULL;
+
+----
+GROUP BY 
+
+SELECT estatus, COUNT(*) AS post_quantity FROM posts GROUP BY (estatus);
+SELECT estatus, SUM(id) AS post_quantity FROM posts GROUP BY (estatus);
+SELECT YEAR(fecha_publicacion) AS post_year, COUNT(*) AS post_quantity FROM posts GROUP BY post_year;
+SELECT MONTHNAME(fecha_publicacion) AS post_month, COUNT(*) AS post_quantity FROM posts GROUP BY post_month;
+SELECT estatus, MONTHNAME(fecha_publicacion) AS post_month, COUNT(*) AS post_quantity FROM posts GROUP BY estatus, post_month;
+
+----
+ORDER BY
+SELECT * FROM posts ORDER BY fecha_publicacion ASC ;
+SELECT * FROM posts ORDER BY fecha_publicacion DESC;
+SELECT * FROM posts ORDER BY fecha_publicacion ASC limit 5;
+
+SELECT MONTHNAME(fecha_publicacion) AS post_month, estatus, COUNT(*) AS post_quantity 
+FROM posts GROUP BY estatus, post_month  HAVING post_quantity >1 ORDER BY post_month ASC
+;
+
+----
+QUERIES ANIDADOS
+
+SELECT new_table_projection.date, COUNT(*) AS post_count FROM (
+SELECT DATE(MIN(fecha_publicacion)) AS date , YEAR(fecha_publicacion) AS post_year FROM posts GROUP BY post_year) AS new_table_projection
+GROUP BY new_table_projection.date
+ORDER BY new_table_projection.date;
+
+SELECT * FROM posts WHERE fecha_publicacion = (SELECT MAX(fecha_publicacion) FROM posts);
+
+SELECT u.nickname, COUNT(*) AS cant_posts, group_concat( nombre) from usuarios as u inner join posts as p on u.id = p.usuario_id 
+inner join categorias as c on c.id = p.categoria_id group by u.id order by cant_posts desc
+
+select c.nombre, count(*) as cant_posts from categorias as c inner join posts as p on c.id = p.categoria_id 
+group by c.id
+order by cant_posts desc
+limit 3
+
