@@ -1,18 +1,22 @@
 package com.myplatzi.mensajes_app;
 
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class Connection {
-    public Connection getConnection(){
-        Connection connection = null;
+
+public class Conexion {
+
+    public Connection get_connection(){
+        Connection conection = null;
         try{
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:33065/mensajes_app","root","");
-            if (connection !=  null){
-                System.out.println("conexion exitosa!");
-            }
-        }catch(SQLException s) {
-            System.out.println(s);
-        }return connection;
+            conection = DriverManager.getConnection("jdbc:mysql://localhost:33065/mensajes_app","root","");
+
+        }catch(SQLException e) {
+            System.out.println(e);
+        }
+        return conection;
+
     }
+
 }
