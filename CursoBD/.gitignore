@@ -1,0 +1,7 @@
+*.class
+/.metadata/
+out/
+*.png
+/persistencia/mensajes_app/target/
+*.iml
+*.draw.io
