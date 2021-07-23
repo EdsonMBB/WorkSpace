@@ -1,6 +1,6 @@
 *.class
 /.metadata/
-out/
+/out/
 *.png
 /persistencia/mensajes_app/target/
 *.iml
