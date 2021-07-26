@@ -20,11 +20,13 @@ class Student {
 
     public boolean equals(Object obj) {
 
-    if(obj.equals(id)){
-        return true;
-    }else{
+        if(this == obj) return true;
+        if(obj instanceof Student) {
+            Student s = (Student)obj;
+            return this.id == s.id;
+        }
         return false;
-    }
+
     }
 
 }
