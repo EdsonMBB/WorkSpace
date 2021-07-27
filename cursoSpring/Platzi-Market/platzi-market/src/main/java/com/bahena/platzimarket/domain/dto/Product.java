@@ -1,4 +1,4 @@
-package com.bahena.platzimarket.domain;
+package com.bahena.platzimarket.domain.dto;
 
 public class Product {
     private int productId;

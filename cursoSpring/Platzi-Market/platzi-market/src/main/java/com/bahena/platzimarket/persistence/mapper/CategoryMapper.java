@@ -1,6 +1,6 @@
 package com.bahena.platzimarket.persistence.mapper;
 
-import com.bahena.platzimarket.domain.Category;
+import com.bahena.platzimarket.domain.dto.Category;
 import com.bahena.platzimarket.persistence.entity.Categoria;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;

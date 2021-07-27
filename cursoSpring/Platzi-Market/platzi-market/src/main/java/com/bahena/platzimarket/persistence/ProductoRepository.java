@@ -1,6 +1,6 @@
 package com.bahena.platzimarket.persistence;
 
-import com.bahena.platzimarket.domain.Product;
+import com.bahena.platzimarket.domain.dto.Product;
 import com.bahena.platzimarket.domain.repository.ProductRepository;
 import com.bahena.platzimarket.persistence.crud.ProductoCrudRepository;
 import com.bahena.platzimarket.persistence.entity.Producto;

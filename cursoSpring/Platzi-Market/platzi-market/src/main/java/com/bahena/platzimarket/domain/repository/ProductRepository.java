@@ -2,7 +2,7 @@ package com.bahena.platzimarket.domain.repository;
 
 
 
-import com.bahena.platzimarket.domain.Product;
+import com.bahena.platzimarket.domain.dto.Product;
 
 import java.util.List;
 import java.util.Optional;

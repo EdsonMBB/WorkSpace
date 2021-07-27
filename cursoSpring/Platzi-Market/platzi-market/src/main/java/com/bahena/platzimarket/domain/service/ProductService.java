@@ -1,6 +1,6 @@
 package com.bahena.platzimarket.domain.service;
 
-import com.bahena.platzimarket.domain.Product;
+import com.bahena.platzimarket.domain.dto.Product;
 import com.bahena.platzimarket.domain.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
