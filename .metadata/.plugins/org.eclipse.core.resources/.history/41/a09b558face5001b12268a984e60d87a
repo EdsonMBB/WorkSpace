@@ -1,0 +1,19 @@
+package com.anncode.lambdas;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		OnOneListener oneListener = OnOneListener(){
+			
+			@Override
+			public void onOne(String message) {
+				
+			}
+			
+		};
+			
+		
+	}
+
+}
