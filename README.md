@@ -1,4 +1,4 @@
-#**Workspace Edson  Bahena Barrios**
+# **Workspace Edson  Bahena Barrios**
 
 ------------
 
@@ -11,7 +11,7 @@ Se subieron proyectos tanto de la plataforma Platzi, como de las clases impartid
 
 
 
- ##**Estructura del Repositorio**
+ ##Estructura del Repositorio
 
 * [cursoBD](#cursoBD)
 * [cursoJavaFuncional](#cursoJavaFuncional)
@@ -23,3 +23,37 @@ Se subieron proyectos tanto de la plataforma Platzi, como de las clases impartid
 * [cursoSpring](#cursoSpring)
 * [cursoTest](#cursoTest)
 * [persistencia](#persistencia)
+
+------------
+
+
+
+###CursoBD
+
+*Contiene los ejercicios hechos en el curso de Fundamentos de Bases de Datos* de la plataforma de platzi, en el se podá encontrar los codigos sql de las tablas utilizadas, así como todas las consultas que aprendimos.
+
+####Tecnologias Utilizadas
+
+`- Mysql WorkBench 8.0`
+
+`- Google FireBase`
+
+###CursoJavaFuncional
+
+*Contiene los ejercicios hechos en el curso de Curso de Programación Funcional con Java SE de la plataforma de platzi, en el se podrán encontrar las diferentes practicas realizadas durante el curso.
+
+####Tecnologias Utilizadas
+
+`- JavaSE 11`
+
+`- IntelliJ IDEA`
+
+###CursoJavaPOO
+
+*Contiene los ejercicios hechos en el curso de Curso JavaSE POO de la plataforma de platzi, en el se podrán encontrar las diferentes practicas realizadas durante el curso.
+
+####Tecnologias Utilizadas
+
+`- JavaSE 11`
+
+`- IntelliJ IDEA`
