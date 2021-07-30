@@ -11,11 +11,18 @@ Se subieron proyectos tanto de la plataforma Platzi, como de las clases impartid
 ------------
 
 
-## ** *Estructura del Repositorio***
+## ***Estructura del repositorio***
 
-[TOCM]
-
-[TOC]
+* [cursoBD](#cursoBD)
+* [cursoJavaFuncional](#cursoJavaFuncional)
+* [cursoJavaPOO](#cursoJavaPOO)
+* [cursoJavaSE](#cursoJavaSE)
+* [cursoPOO](#cursoPOO)
+* [javaSEBasicoAvanzado](#javaSEBasicoAvanzado)
+* [practicas](#practicas)
+* [cursoSpring](#cursoSpring)
+* [cursoTest](#cursoTest)
+* [persistencia](#persistencia)
 
 ------------
 
