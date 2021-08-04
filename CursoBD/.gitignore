@@ -1,8 +1,8 @@
+diagramas
 *.class
 /.metadata/
 out/
 *.png
-/persistencia/mensajes_app/target/
 *.iml
 *.drawio
-diagramas/
+
