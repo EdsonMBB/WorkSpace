@@ -43,8 +43,9 @@ bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 
+diagramas
 ### IntelliJ IDEA ###
-/**/.idea/
+.idea
 *.iws
 *.iml
 *.ipr
