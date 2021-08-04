@@ -5,3 +5,4 @@ out/
 /persistencia/mensajes_app/target/
 *.iml
 *.drawio
+diagramas/
